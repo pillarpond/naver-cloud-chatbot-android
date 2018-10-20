@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="obj" type="pp.naverchatbot.model.Content" />
+    </data>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{obj.title}"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:visibility="@{obj.title == null ? View.GONE : View.VISIBLE}"
+        android:padding="6dp" />
+</layout>
